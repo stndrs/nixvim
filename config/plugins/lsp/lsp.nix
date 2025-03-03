@@ -1,12 +1,12 @@
 {
   plugins = {
     lsp-signature.enable = true;
+    lsp-status.enable = true;
     fidget.enable = true;
 
     lsp = {
       enable = true;
       servers = {
-        lua_ls.enable = true;
         gleam.enable = true;
       };
       keymaps.lspBuf = {

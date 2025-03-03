@@ -26,7 +26,6 @@
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
 
-    # ./ui/alpha.nix
     ./ui/flash.nix
     ./ui/bufferline.nix
     ./ui/general.nix
