@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "blink-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1739250403,
-        "narHash": "sha256-ZDOWalzRuEOK2uiPGyFBZPpeIKAeWNLS7KEOXd5ETi8=",
-        "owner": "saghen",
-        "repo": "blink.compat",
-        "rev": "4104671562c663d059d91a99da3780bead5bc467",
-        "type": "github"
-      },
-      "original": {
-        "owner": "saghen",
-        "repo": "blink.compat",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -186,7 +170,6 @@
     },
     "root": {
       "inputs": {
-        "blink-compat": "blink-compat",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"

@@ -5,6 +5,10 @@
 
     lsp = {
       enable = true;
+      servers = {
+        lua_ls.enable = true;
+        gleam.enable = true;
+      };
       keymaps.lspBuf = {
         "K" = "hover";
         "gi" = "implementation";

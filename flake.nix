@@ -4,15 +4,15 @@
   inputs = {
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-
-    blink-compat = {
-      url = "github:saghen/blink.compat";
-      flake = false;
-    };
   };
 
   outputs =
-    { nixvim, flake-parts, nixpkgs, ... }@inputs:
+    {
+      nixvim,
+      flake-parts,
+      nixpkgs,
+      ...
+    }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -25,17 +25,17 @@
         { system, ... }:
         let
           nixvimLib = nixvim.lib.${system};
-	  pkgs = import nixpkgs {
-	    inherit system;
-	    config.allowUnfree = true;
-	  };
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
-	    inherit pkgs;
+            inherit pkgs;
             module = import ./config; # import the module directly
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
-	      inherit inputs;
+              inherit inputs;
             } // import ./lib { inherit pkgs; };
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;

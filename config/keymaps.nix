@@ -159,6 +159,13 @@
 
     {
       mode = "n";
+      key = "<leader>bo";
+      action = "<cmd>bo<cr>";
+      options.desc = "Delete buffer";
+    }
+
+    {
+      mode = "n";
       key = "<S-h>";
       action = "<cmd>bprevious<cr>";
       options.desc = "Prev buffer";

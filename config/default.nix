@@ -14,6 +14,7 @@
     ghostscript
     imagemagick
     lazygit
+    lua-language-server
     mermaid-cli
     ripgrep
     texliveSmall
