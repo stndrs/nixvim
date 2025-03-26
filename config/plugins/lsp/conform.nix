@@ -8,6 +8,7 @@
         timeoutMs = 500;
       };
       formatters_by_ft = {
+        gleam = [ "gleam" ];
         # Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
         "_" = [
           "squeeze_blanks"
