@@ -23,6 +23,11 @@
           };
         };
         auto_suggestions_provider = "deepseek";
+        mappings = {
+          suggestion = {
+            accept = "<Right>";
+          };
+        };
       };
     };
   };
