@@ -78,6 +78,8 @@
             }
           '';
         };
+        bufdelete.enabled = true;
+        explorer.enabled = true;
         image.enabled = true;
         input.enabled = true;
         gitbrowse.enabled = true;

@@ -1,8 +1,9 @@
 {
   imports = [
+    ./ai/avante.nix
     ./cmp/cmp.nix
 
-    ./editor/neotree.nix
+    # ./editor/neotree.nix
     ./editor/whichkey.nix
 
     ./git/gitsigns.nix
