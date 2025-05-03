@@ -19,5 +19,6 @@
     mermaid-cli
     ripgrep
     texliveSmall
+    sqlite
   ];
 }

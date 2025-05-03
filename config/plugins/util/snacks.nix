@@ -79,11 +79,17 @@
           '';
         };
         bufdelete.enabled = true;
+        # git.enabled = true;
+        indent.enabled = true;
+        quickfile.enabled = true;
+        scope.enabled = true;
+        scroll.enabled = true;
         explorer.enabled = true;
         image.enabled = true;
         input.enabled = true;
         gitbrowse.enabled = true;
         lazygit.enabled = true;
+        picker.enabled = true;
         profiler.enabled = true;
         notifier.enabled = true;
         statuscolumn.enabled = true;
@@ -107,6 +113,22 @@
       action = "<cmd>lua Snacks.lazygit()<CR>";
       options = {
         desc = "Open lazygit";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ee";
+      action = "<cmd>lua Snacks.explorer.open()<CR>";
+      options = {
+        desc = "Open [e]xplorer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>er";
+      action = "<cmd>lua Snacks.explorer.reveal()<CR>";
+      options = {
+        desc = "[R]eveal file in explorer";
       };
     }
   ];

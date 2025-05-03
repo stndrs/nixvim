@@ -2,6 +2,128 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # Files
+    {
+      mode = "n";
+      key = "<leader>fb";
+      action = "<cmd>lua Snacks.picker.buffers()<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [b]uffers";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fc";
+      action = "<cmd>lua Snacks.picker.files({ cwd = vim.fn.stdpath 'config' })<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [c]onfig file";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ff";
+      action = "<cmd>lua Snacks.picker.files()<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [f]iles";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<cmd>lua Snacks.picker.git_files()<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [g]it files";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fp";
+      action = "<cmd>lua Snacks.picker.projects()<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [p]rojects";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>fr";
+      action = "<cmd>lua Snacks.picker.recent()<CR>";
+      options = {
+        silent = true;
+        desc = "[F]ind [r]ecent";
+      };
+    }
+    # Grep
+    {
+      mode = "n";
+      key = "<leader>sb";
+      action = "<cmd>lua Snacks.picker.lines()<CR>";
+      options = {
+        silent = true;
+        desc = "Buffer lines";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>sB";
+      action = "<cmd>lua Snacks.picker.grep_buffers()<CR>";
+      options = {
+        silent = true;
+        desc = "Grep open buffers";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>sg";
+      action = "<cmd>lua Snacks.picker.grep()<CR>";
+      options = {
+        silent = true;
+        desc = "Grep files";
+      };
+    }
+    # Navigation
+    {
+      mode = "n";
+      key = "]e";
+      action = "<cmd>lua vim.diagnostic.jump({severity = vim.diagnostic.severity.ERROR, count = 1, float = true})<cr>";
+      options = {
+        silent = true;
+        desc = "Next error";
+      };
+    }
+    {
+      mode = "n";
+      key = "[e";
+      action = "<cmd>lua vim.diagnostic.jump({severity = vim.diagnostic.severity.ERROR, count = -1, float = true})<cr>";
+      options = {
+        silent = true;
+        desc = "Previous error";
+      };
+    }
+    {
+      mode = "n";
+      key = "]d";
+      action = "<cmd>lua vim.diagnostic.jump({count = 1, float = true})<cr>";
+      options = {
+        silent = true;
+        desc = "Next diagnostic";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "[d";
+      action = "<cmd>lua vim.diagnostic.jump({count = -1, float = true})<cr>";
+      options = {
+        silent = true;
+        desc = "Previous diagnostic";
+      };
+    }
+
     # Windows
     {
       mode = "n";
@@ -153,15 +275,21 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = "<cmd>bd<cr>";
+      action = "<cmd>lua Snacks.bufdelete.delete()<CR>";
       options.desc = "Delete buffer";
     }
 
     {
       mode = "n";
       key = "<leader>bo";
-      action = "<cmd>bo<cr>";
-      options.desc = "Delete buffer";
+      action = "<cmd>lua Snacks.bufdelete.other()<CR>";
+      options.desc = "Delete other buffers";
+    }
+    {
+      mode = "n";
+      key = "<leader>ba";
+      action = "<cmd>lua Snacks.bufdelete.all()<CR>";
+      options.desc = "Delete all buffers";
     }
 
     {
