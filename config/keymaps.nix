@@ -2,6 +2,92 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # LSP
+    # {
+    #   mode = [
+    #     "n"
+    #     "x"
+    #   ];
+    #   key = "<leader>ca";
+    #   action = "<cmd>lua vim.lsp.buf.code_action<CR>";
+    #   options = {
+    #     silent = true;
+    #     desc = "[C]ode [A]ction";
+    #   };
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<leader>rn";
+    #   action = "<cmd>lua vim.lsp.buf.rename<CR>";
+    #   options = {
+    #     silent = true;
+    #     desc = "[R]e[n]ame";
+    #   };
+    # }
+    {
+      mode = "n";
+      key = "<leader>gd";
+      action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
+      options = {
+        silent = true;
+        desc = "[G]oto [d]efinition";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gD";
+      action = "<cmd>lua Snacks.picker.lsp_declarations()<CR>";
+      options = {
+        silent = true;
+        desc = "[G]oto [D]eclaration";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gr";
+      action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
+      options = {
+        silent = true;
+        desc = "[G]oto [r]eferences";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gI";
+      action = "<cmd>lua Snacks.picker.lsp_implementations()<CR>";
+      options = {
+        silent = true;
+        desc = "[G]oto [I]mplementations";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gy";
+      action = "<cmd>lua Snacks.picker.lsp_type_definitions()<CR>";
+      options = {
+        silent = true;
+        desc = "[G]oto T[y]pe Definitions";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ss";
+      action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
+      options = {
+        silent = true;
+        desc = "LSP Symbols";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>sS";
+      action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
+      options = {
+        silent = true;
+        desc = "LSP Workspace Symbols";
+      };
+    }
+
     # Files
     {
       mode = "n";

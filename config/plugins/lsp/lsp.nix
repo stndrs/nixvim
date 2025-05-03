@@ -11,9 +11,11 @@
       };
       keymaps.lspBuf = {
         "K" = "hover";
-        "gi" = "implementation";
-        "gd" = "definition";
-        "gt" = "type_definition";
+        "rn" = "rename";
+        "ca" = "code_action";
+        # "gi" = "implementation";
+        # "gd" = "definition";
+        # "gt" = "type_definition";
       };
     };
     lint.enable = true;
