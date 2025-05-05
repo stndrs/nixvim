@@ -1,10 +1,5 @@
 {
   plugins = {
-    # dressing.enable = true;
-    # plenary.enable = true;
-    # nui.enable = true;
-    # web-devicons.enable = true;
-
     avante = {
       enable = true;
 
