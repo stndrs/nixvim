@@ -9,6 +9,10 @@
       };
       formatters_by_ft = {
         gleam = [ "gleam" ];
+        erlang = [
+          "erl"
+          "hrl"
+        ];
         # Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
         "_" = [
           "squeeze_blanks"

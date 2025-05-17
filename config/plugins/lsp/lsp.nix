@@ -8,6 +8,7 @@
       enable = true;
       servers = {
         gleam.enable = true;
+        erlangls.enable = true;
       };
       keymaps.lspBuf = {
         "K" = "hover";
