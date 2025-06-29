@@ -12,7 +12,6 @@
     fd
     fzf
     ghostscript
-    gleam
     imagemagick
     lazygit
     lua-language-server
