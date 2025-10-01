@@ -9,47 +9,7 @@
       servers = {
         gleam.enable = true;
         erlangls.enable = true;
-        ruby_lsp = {
-          enable = true;
-          settings = {
-            init_options = {
-              formatter = "standard";
-              linters = [ "standard" ];
-            };
-            root_markers = [
-              ".git/"
-              "Gemfile"
-            ];
-          };
-        };
-        sorbet = {
-          enable = true;
-          cmd = [
-            "bundle"
-            "exec"
-            "srb"
-            "tc"
-            "--lsp"
-            "--enable-experimental-rbs-signatures"
-            "--cache-dir=/tmp/sorbet-cache"
-          ];
-          filetypes = [ "ruby" ];
-          settings = {
-            init_options = {
-              highlightUntyped = true;
-              supportsSorbetURIs = true;
-            };
-          };
-          rootMarkers = [ "Gemfile" ];
-          # cmd = { 'bundle', 'exec', 'srb', 'tc', '--lsp', '--enable-experimental-rbs-signatures', '--cache-dir=/tmp/sorbet-cache' },
-          # filetypes = { 'ruby' },
-          # init_options = {
-          #   highlightUntyped = true,
-          #   supportsSorbetURIs = true,
-          # },
-          # root_file = vim.fs.dirname(vim.fs.find('Gemfile', { upward = true })[1]),
-
-        };
+        ruby_lsp.enable = true;
       };
       keymaps.lspBuf = {
         "K" = "hover";
