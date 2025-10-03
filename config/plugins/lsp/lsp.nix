@@ -9,7 +9,6 @@
       servers = {
         gleam.enable = true;
         erlangls.enable = true;
-        ruby_lsp.enable = true;
       };
       keymaps.lspBuf = {
         "K" = "hover";
