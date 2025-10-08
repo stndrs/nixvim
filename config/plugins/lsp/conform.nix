@@ -13,7 +13,6 @@
           "erl"
           "hrl"
         ];
-        ruby = [ "rb" ];
         # Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
         "_" = [
           "squeeze_blanks"
