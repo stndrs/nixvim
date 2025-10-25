@@ -3,7 +3,6 @@
   imports = [
     ./autocmd.nix
     ./keymaps.nix
-    ./lazy.nix
     ./settings.nix
     ./plugins
   ];

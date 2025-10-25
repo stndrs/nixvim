@@ -66,18 +66,6 @@
           '';
         };
 
-        dashboard = {
-          enabled = true;
-          setup.__raw = ''
-            {
-              sections = {
-                { section = "header" },
-                { section = "keys", gap = 1, padding = 1 },
-                { section = "startup" },
-              },
-            }
-          '';
-        };
         bufdelete.enabled = true;
         # git.enabled = true;
         indent.enabled = true;

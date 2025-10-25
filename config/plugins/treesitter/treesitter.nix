@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  extraPackages = with pkgs; [
+    gcc
+    tree-sitter
+  ];
   plugins = {
     treesitter = {
       enable = true;

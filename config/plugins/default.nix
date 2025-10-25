@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ai/avante.nix
     ./cmp/cmp.nix
 
     ./editor/whichkey.nix
