@@ -10,6 +10,7 @@
   extraPackages = with pkgs; [
     fd
     fzf
+    gleam
     ghostscript
     imagemagick
     lazygit
